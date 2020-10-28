@@ -17,6 +17,31 @@ data.forEach((ufoSighting) => {
   });
 // Use a date form in your HTML document and write JavaScript code that will listen for events and search through the date/time column to find rows that match user input.
 
+// var button = d3.select("#filter-btn");
+
+// var form = d3.select("#filters");
+
+// var inputElement = d3.select("#datetime");
+
+// button.on("click", () => {
+//     d3.event.preventDefault();
+//     var inputValue = inputElement.property("value");
+//     console.log(inputValue);
+//     tableBody.remove();
+//     tableBody = ufotable.append("tbody");
+//     var filtered = data.filter(data => data.datetime == inputValue) 
+//             filtered.forEach(ufoSighting => {
+//             var row = tableBody.append("tr");
+//             Object.entries(ufoSighting).forEach(([key, value]) => {
+//                 var cell = row.append("td");
+//                 cell.text(value);
+//             });
+//         });
+// })
+
+// // Level 2: Multiple Search Categories (Optional)
+// // Using multiple input tags and/or select dropdowns, write JavaScript code so the user can to set multiple filters and search for UFO sightings using the following criteria based on the table columns:
+
 var button = d3.select("#filter-btn");
 
 var form = d3.select("#filters");
@@ -28,7 +53,7 @@ button.on("click", () => {
     var inputValue = inputElement.property("value");
     var stateValue = inputState.property("value");
     console.log(inputValue);
-    console.log(stateValue)
+    console.log(stateValue);
     tableBody.remove();
     tableBody = ufotable.append("tbody");
 
@@ -41,57 +66,3 @@ button.on("click", () => {
             });
         });
 })
-
-// // Level 2: Multiple Search Categories (Optional)
-// 
-// // Using multiple input tags and/or select dropdowns, write JavaScript code so the user can to set multiple filters and search for UFO sightings using the following criteria based on the table columns:
-// 
-
-
-
-
-// // // Create event handlers 
-
-// button.on("click", runEnter);
-// form.on("submit",runEnter);
-// from data.js
-// var tableData = data;
-// function runEnter() {
-//     d3.event.preventDefault();
-//     var inputValue = inputElement.property("value");
-//     console.log(inputValue);
-//     tableBody.remove();
-//     tableBody = ufotable.append("tbody");
-//     data.filter(data => data.datetime == inputValue)
-//         .forEach(ufoSighting => {
-//             var row = tableBody.append("tr");
-//             Object.entries(ufoSighting).forEach(([key, value]) => {
-//                 var cell = row.append("td");
-//                 cell.text(value);
-//             });
-//         });
-// }
-// button.on("click", runEnter);
-// form.on("submit",runEnter);
-// 
-// // // Complete the event handler function for the form
-// function runEnter() {
-// 
-// //   // Prevent the page from refreshing
-//   d3.event.preventDefault();
-  
-// //   // Select the input element and get the raw HTML node
-//   var inputElement = d3.select("#datetime");
-// 
-// //   // Get the value property of the input element
-//   var inputValue = inputElement.property("value");
-//   console.log(inputValue);
-//   console.log(tableData);
-//   var filteredData = tableData.filter(ufoSighting => ufoSighting.datetime === inputValue);
-//   console.log(filteredData);
-
-// // date/time
-// // city
-// // state
-// // country
-// // shape
